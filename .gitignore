@@ -4,3 +4,6 @@
 ## Flask cache and sessions ##
 __pycache__/
 flask_session/
+
+## Python Virtual Environment Configs ##
+.venv/
