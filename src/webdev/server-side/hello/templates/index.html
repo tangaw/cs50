@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <form action="/greet" method="POST">
+    <!-- Request user input and store it in `name` and send it to "/greet" -->
+    <input name="name" type="text" autofocus autocomplete="off" placeholder="Name">
+    <input type="submit">
+  </form>
+  
+{% endblock %}

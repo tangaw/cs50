@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+  <h1>Cart</h1>
+  <a href="/">Back to store</a>.
+  <ol>
+  {% for book in books %}
+    <li>{{ book.title }}</li>
+    <form action="/delete" method="POST">
+      <input type="hidden" name="id" value="{{ book.id }}">
+      <input type="submit" value="Remove item from cart">
+    </form>
+  {% endfor %}
+  </ol> 
+
+  <a href="/empty">Empty cart</a>.
+
+{% endblock %}

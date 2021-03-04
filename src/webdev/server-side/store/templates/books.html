@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+  <h1>Books</h1>
+
+  {% for book in books %}
+    <h2>{{ book.title }}</h2>
+    <form action="/cart" method="POST">
+      <input type="hidden" name="id" value="{{ book.id }}">
+      <input type="submit" value="Add to cart">
+    </form>
+  {% endfor %}
+
+{% endblock %}

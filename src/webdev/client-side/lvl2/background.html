@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelector("form").addEventListener("keyup", () => {
+        let name = document.querySelector("#name").value;
+        if (name) {
+          document.querySelector("#echo").innerHTML = `Hello, ${name}.`;
+        }
+        else {
+          document.querySelector("#echo").innerHTML = `Hello, whoever you are.`;
+        }
+      });
+
+      document.querySelectorAll("button").forEach(function (elem) {
+        elem.addEventListener("click", function () {
+          let color = this.id;
+          console.log(color);
+          let body = document.querySelector("body");
+          if (color === "red") {
+            body.style.backgroundColor = "#FF6961";
+          } else if (color === "green") {
+            body.style.backgroundColor = "#CAE7C1";
+          } else {
+            body.style.backgroundColor = "#80CEE1";
+          }
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <form>
+    <input id="name" autofocus autocomplete="off" placeholder="Enter your name" type="text">
+  </form>
+  <p id="echo"></p>
+
+  <button id="red">R</button>
+  <button id="green">G</button>
+  <button id="blue">B</button>
+
+  <!-- <script src="" async defer></script> -->
+</body>
+
+</html>
