@@ -1,2 +1,6 @@
 ## Local Configs ##
 .vscode/
+
+## Flask cache and sessions ##
+__pycache__/
+flask_session/
